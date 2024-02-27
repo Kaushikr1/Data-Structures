@@ -8,9 +8,9 @@
 import Foundation
 
 
-class LinkedLists<T:Equatable>{
-    var head:Node<T>?
-    
+class LinkedLists<T:Equatable> : ObservableObject{
+    @Published var head: Node<T>?
+
     func insert(value:T){
         let newNode = Node(value: value)
         if head == nil {

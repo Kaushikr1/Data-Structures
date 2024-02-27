@@ -21,7 +21,7 @@ class Arrays<T: Hashable>{
         return nil
     }
     
-    func checkMissingNumber(_ elements: [Int]){
+    func checkMissingNumber(_ elements: [Int]) -> Int{
         var sum = 0
         for i in elements{
             sum += i
@@ -29,18 +29,8 @@ class Arrays<T: Hashable>{
         let originalSum = Int(((elements.count + 2) * (elements.count + 1)) / 2)
         
         print(originalSum - sum)
-    }
-    
-    func findLeaders(in arr: [Int]) -> [Int] {
-      var leaders = [Int]()
-      var currentMax = Int.min
-      for element in arr.reversed() {
-        if element > currentMax {
-          leaders.append(element)
-          currentMax = element
-        }
-      }
-      return leaders
+        
+        return (originalSum - sum)
     }
 
 }

@@ -12,6 +12,12 @@
 		69106B282B8CD79700C8D964 /* Arrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69106B242B8CD79700C8D964 /* Arrays.swift */; };
 		69106B292B8CD79700C8D964 /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69106B252B8CD79700C8D964 /* Queues.swift */; };
 		69106B2A2B8CD79700C8D964 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69106B262B8CD79700C8D964 /* Stacks.swift */; };
+		69203D012B8D1F7700D20E55 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D002B8D1F7700D20E55 /* StackView.swift */; };
+		69203D032B8D1FBF00D20E55 /* LinkedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D022B8D1FBF00D20E55 /* LinkedListView.swift */; };
+		69203D052B8D202900D20E55 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D042B8D202900D20E55 /* SearchView.swift */; };
+		69203D072B8D220E00D20E55 /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D062B8D220E00D20E55 /* QueueView.swift */; };
+		69203D092B8D221D00D20E55 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D082B8D221D00D20E55 /* SortView.swift */; };
+		69203D0B2B8D228900D20E55 /* ArrayViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69203D0A2B8D228900D20E55 /* ArrayViews.swift */; };
 		69DF28A92B557C270022B890 /* DataStructuresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF28A82B557C270022B890 /* DataStructuresApp.swift */; };
 		69DF28AB2B557C270022B890 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF28AA2B557C270022B890 /* ContentView.swift */; };
 		69DF28AD2B557C280022B890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DF28AC2B557C280022B890 /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 		69106B242B8CD79700C8D964 /* Arrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrays.swift; sourceTree = "<group>"; };
 		69106B252B8CD79700C8D964 /* Queues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queues.swift; sourceTree = "<group>"; };
 		69106B262B8CD79700C8D964 /* Stacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
+		69203D002B8D1F7700D20E55 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		69203D022B8D1FBF00D20E55 /* LinkedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListView.swift; sourceTree = "<group>"; };
+		69203D042B8D202900D20E55 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		69203D062B8D220E00D20E55 /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
+		69203D082B8D221D00D20E55 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
+		69203D0A2B8D228900D20E55 /* ArrayViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViews.swift; sourceTree = "<group>"; };
 		69DF28A52B557C270022B890 /* DataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DF28A82B557C270022B890 /* DataStructuresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresApp.swift; sourceTree = "<group>"; };
 		69DF28AA2B557C270022B890 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +71,19 @@
 			path = "Data Structures";
 			sourceTree = "<group>";
 		};
+		69203CFF2B8D1F6600D20E55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69203D0A2B8D228900D20E55 /* ArrayViews.swift */,
+				69203D002B8D1F7700D20E55 /* StackView.swift */,
+				69203D022B8D1FBF00D20E55 /* LinkedListView.swift */,
+				69203D042B8D202900D20E55 /* SearchView.swift */,
+				69203D062B8D220E00D20E55 /* QueueView.swift */,
+				69203D082B8D221D00D20E55 /* SortView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		69DF289C2B557C260022B890 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +103,7 @@
 		69DF28A72B557C270022B890 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				69203CFF2B8D1F6600D20E55 /* Views */,
 				69106B222B8CD77600C8D964 /* Data Structures */,
 				69DF28BB2B558CC20022B890 /* Algorithms */,
 				69DF28A82B557C270022B890 /* DataStructuresApp.swift */,
@@ -178,11 +204,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				69106B2A2B8CD79700C8D964 /* Stacks.swift in Sources */,
+				69203D012B8D1F7700D20E55 /* StackView.swift in Sources */,
 				69DF28BD2B558CEA0022B890 /* SearchingAlgo.swift in Sources */,
 				69106B292B8CD79700C8D964 /* Queues.swift in Sources */,
 				69106B282B8CD79700C8D964 /* Arrays.swift in Sources */,
+				69203D032B8D1FBF00D20E55 /* LinkedListView.swift in Sources */,
+				69203D072B8D220E00D20E55 /* QueueView.swift in Sources */,
 				69DF28B22B557C280022B890 /* Persistence.swift in Sources */,
+				69203D0B2B8D228900D20E55 /* ArrayViews.swift in Sources */,
 				69DF28B52B557C280022B890 /* DataStructures.xcdatamodeld in Sources */,
+				69203D092B8D221D00D20E55 /* SortView.swift in Sources */,
+				69203D052B8D202900D20E55 /* SearchView.swift in Sources */,
 				69106B272B8CD79700C8D964 /* LinkedLists.swift in Sources */,
 				69DF28AB2B557C270022B890 /* ContentView.swift in Sources */,
 				69DF28A92B557C270022B890 /* DataStructuresApp.swift in Sources */,

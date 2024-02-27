@@ -10,35 +10,61 @@ import CoreData
 
 struct ContentView: View {
     let searchAlgorithms = SearchAlgorithms<Int>()
-    let numbers = [1, 6, 3, 4, 5, 4, 7, 2, 9, 10]
-    let target = 6
-    
-    @StateObject var linkedList = LinkedLists<Int>()
-    @State private var inputValue: String = ""
-    
+    let numbers = [15, 6, 3, 4, 5, 4, 7, 2, 9, 10]
+    let target = 15
+    @State private var index: Int?
+
+
     var body: some View {
-        VStack {
-            Text("Numbers: \(numbers.description)")
-            Text("Target: \(target)")
-            Button("Linear Search") {
-                let (index, found) = self.searchAlgorithms.linearSearch(self.numbers, item: self.target)
-                if found {
-                    print("Linear Search: Found at index \(index!)")
-                } else {
-                    print("Linear Search: Not found")
+        NavigationView {
+            VStack(spacing: 20) {
+                NavigationLink(destination: ArrayViews()) {
+                    Text("Array View")
+                        .padding()
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
-            }
-            .padding()
-            
-            Button("Binary Search") {
-                let (index, found) = self.searchAlgorithms.binarySearch(self.numbers.sorted(), item: self.target)
-                if found {
-                    print("Binary Search: Found at index \(index!)")
-                } else {
-                    print("Binary Search: Not found")
+                NavigationLink(destination: StackView()) {
+                    Text("Stack View")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
+                NavigationLink(destination: QueueView()) {
+                    Text("Queue View")
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: LinkedListView()) {
+                    Text("Linked List View")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                
+                NavigationLink(destination: SearchView()) {
+                    Text("Search View")
+                        .padding()
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                NavigationLink(destination: SortView()) {
+                    Text("Sort View")
+                        .padding()
+                        .background(Color.gray)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+               
             }
-            .padding()
+            .navigationBarTitle("Main Menu")
         }
     }
 }

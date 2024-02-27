@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct SortView: View {
+    @State private var numbers = [5, 2, 9, 3, 7, 1, 8, 4, 6]
+    @State private var sortedNumbers: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Unsorted: \(numbers.description)")
+            Button("Bubble Sort") {
+                SortingAlgorithms().bubbleSort(&numbers)
+                sortedNumbers = numbers.description
+            }
+            Button("Sort") {
+                SortingAlgorithms().sorting(&numbers)
+                sortedNumbers = numbers.description
+            }
+            Button("Merge Sort") {
+                numbers = SortingAlgorithms().mergeSort(numbers)
+                sortedNumbers = numbers.description
+            }
+            Text("Sorted: \(sortedNumbers)")
+        }
+        .padding()
     }
 }
 
