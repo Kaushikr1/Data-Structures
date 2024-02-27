@@ -13,6 +13,9 @@ struct ContentView: View {
     let numbers = [1, 6, 3, 4, 5, 4, 7, 2, 9, 10]
     let target = 6
     
+    @StateObject var linkedList = LinkedLists<Int>()
+    @State private var inputValue: String = ""
+    
     var body: some View {
         VStack {
             Text("Numbers: \(numbers.description)")
